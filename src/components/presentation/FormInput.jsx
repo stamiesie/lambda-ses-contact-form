@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './FormInput.module.css';
 
 
 function FormInput({ onSubmit, onInputChange, sender, email, body }) {
     return (
-        <div>
+        <div className={styles.inputParent}>
+        <div className={styles.inputForm}>
             <h2>Contact Us</h2>
             <form onSubmit={onSubmit}>
                 <label htmlFor="sender">Name:</label>
@@ -37,6 +39,7 @@ function FormInput({ onSubmit, onInputChange, sender, email, body }) {
                     <p id="result-text"></p>
                 </div>
             </form>
+        </div>
         </div>
     )
 }
