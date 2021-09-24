@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function FormInput({ onSubmit, onChange, sender, email, body }) {
+function FormInput({ onSubmit, onInputChange, sender, email, body }) {
     return (
         <div>
             <h2>Contact Us</h2>
@@ -12,8 +12,8 @@ function FormInput({ onSubmit, onChange, sender, email, body }) {
                 name="sender" 
                 type="text" 
                 value={sender}
-                onChange={onChange}
-                noValidate/>
+                onChange={onInputChange}
+                />
                 <br/><br/>
 
                 <label htmlFor="email">Email:</label>
@@ -21,18 +21,17 @@ function FormInput({ onSubmit, onChange, sender, email, body }) {
                 name="email" 
                 type="email" 
                 value={email}
-                onChange={onChange}
-                noValidate/>
+                onChange={onInputChange}
+                />
                 <br/><br/>
 
                 <label htmlFor="body">Message:</label>
                 <textarea 
                 name="body" 
                 value={body}
-                onChange={onChange}
-                noValidate
+                onChange={onInputChange}
                 ></textarea><br/><br/>
-
+                
                 <button>Submit</button>
                 <div>
                     <p id="result-text"></p>
@@ -45,7 +44,7 @@ function FormInput({ onSubmit, onChange, sender, email, body }) {
 
 FormInput.propTypes = {
     onSubmit: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onInputChange: PropTypes.func.isRequired,
     sender: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
