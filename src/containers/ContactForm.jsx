@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FormInput from '../components/presentation/FormInput';
+import { sendEmail } from '../service/Lambda';
 
 const ContactForm = () => {
 
@@ -32,7 +33,7 @@ const ContactForm = () => {
         console.log('Name:', state.sender)
         console.log('Email:', state.email)
         console.log('Message:', state.message)
-        // lambda here?
+        await sendEmail(state.sender, state.email, state.message);
     }
 
     return (
