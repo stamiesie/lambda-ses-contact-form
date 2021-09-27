@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './FormInput.module.css';
 
 
-function FormInput({ onSubmit, onInputChange, sender, email, body }) {
+function FormInput({ onSubmit, onInputChange, sender, email, message }) {
     return (
         <div className={styles.inputParent}>
         <div className={styles.inputForm}>
@@ -27,10 +27,10 @@ function FormInput({ onSubmit, onInputChange, sender, email, body }) {
                 />
                 <br/><br/>
 
-                <label htmlFor="body">Message:</label>
+                <label htmlFor="message">Message:</label>
                 <textarea 
-                name="body" 
-                value={body}
+                name="message" 
+                value={message}
                 onChange={onInputChange}
                 ></textarea><br/><br/>
                 
@@ -50,7 +50,7 @@ FormInput.propTypes = {
     onInputChange: PropTypes.func.isRequired,
     sender: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
 
 }
 

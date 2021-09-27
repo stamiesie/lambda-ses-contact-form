@@ -17,7 +17,7 @@ const ContactForm = () => {
     const [state, setState] = useState({
         sender: '',
         email: '',
-        body: ''
+        message: ''
     });
 
     const handleChange = (e) => {
@@ -31,7 +31,7 @@ const ContactForm = () => {
         e.preventDefault();
         console.log('Name:', state.sender)
         console.log('Email:', state.email)
-        console.log('Message:', state.body)
+        console.log('Message:', state.message)
         // lambda here?
     }
 
@@ -77,7 +77,7 @@ const ContactForm = () => {
             onInputChange={handleChange}
             sender={state.sender}
             email={state.email}
-            body={state.body}
+            message={state.message}
             />
         </>
     );
