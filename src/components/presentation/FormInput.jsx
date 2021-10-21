@@ -7,9 +7,9 @@ function FormInput({ onSubmit, onInputChange, sender, email, message }) {
     return (
         <div className={styles.inputParent}>
         <div className={styles.inputForm}>
-            <h2>Contact Us</h2>
+            <h2>Contact Me</h2>
             <form onSubmit={onSubmit}>
-                <label htmlFor="sender">Name:</label>
+                <label htmlFor="sender">Name: </label>
                 <input 
                 name="sender" 
                 type="text" required
@@ -18,7 +18,7 @@ function FormInput({ onSubmit, onInputChange, sender, email, message }) {
                 />
                 <br/><br/>
 
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Email: </label>
                 <input 
                 name="email" 
                 type="email" required
@@ -27,7 +27,7 @@ function FormInput({ onSubmit, onInputChange, sender, email, message }) {
                 />
                 <br/><br/>
 
-                <label htmlFor="message">Message:</label>
+                <label htmlFor="message">Message: </label>
                 <textarea 
                 name="message" required
                 value={message}

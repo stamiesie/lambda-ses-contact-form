@@ -22,6 +22,7 @@ const ContactForm = () => {
         console.log('Email:', state.email)
         console.log('Message:', state.message)
         await sendEmail(state.sender, state.email, state.message);
+        setState({sender: '', email: '', message: ''});
     }
 
     return (
