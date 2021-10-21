@@ -12,7 +12,7 @@ function FormInput({ onSubmit, onInputChange, sender, email, message }) {
                 <label htmlFor="sender">Name:</label>
                 <input 
                 name="sender" 
-                type="text" 
+                type="text" required
                 value={sender}
                 onChange={onInputChange}
                 />
@@ -21,7 +21,7 @@ function FormInput({ onSubmit, onInputChange, sender, email, message }) {
                 <label htmlFor="email">Email:</label>
                 <input 
                 name="email" 
-                type="email" 
+                type="email" required
                 value={email}
                 onChange={onInputChange}
                 />
@@ -29,7 +29,7 @@ function FormInput({ onSubmit, onInputChange, sender, email, message }) {
 
                 <label htmlFor="message">Message:</label>
                 <textarea 
-                name="message" 
+                name="message" required
                 value={message}
                 onChange={onInputChange}
                 ></textarea><br/><br/>
